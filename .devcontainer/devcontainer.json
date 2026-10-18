@@ -1,9 +1,9 @@
 // https: //code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials
 {
-  "name": "python-template",
+  "name": "anysolv-tutorial",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/workspaces/python-template",
+  "workspaceFolder": "/workspaces/anysolv-tutorial",
   "remoteUser": "vscode",
   // conda 環境そのものは .devcontainer/Dockerfile でイメージに焼いてあるので、ここに
   // 残すのは自分自身の editable install だけ。これをビルド時に回せないのは、

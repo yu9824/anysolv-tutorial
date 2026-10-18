@@ -1,37 +1,38 @@
-"""Tests of ``python_template.helpers``."""
+"""Tests of ``anysolv_tutorial.helpers``."""
 
 from __future__ import annotations
 
 import subprocess
 import sys
 
+import anysolv_tutorial.helpers
 import pytest
-
-import python_template.helpers
-from python_template.helpers import (
+from anysolv_tutorial.helpers import (
     dummy_tqdm,
     is_argument,
     is_installed,
     tqdm_joblib,
 )
-from python_template.helpers._helpers import deprecated
+from anysolv_tutorial.helpers._helpers import deprecated
 
 
 def test_all_public_names_are_importable():
-    for name in python_template.helpers.__all__:
-        assert hasattr(python_template.helpers, name)
+    for name in anysolv_tutorial.helpers.__all__:
+        assert hasattr(anysolv_tutorial.helpers, name)
 
 
 # --- is_installed ------------------------------------------------------------
 
 
-@pytest.mark.parametrize("package_name", ["sys", "pytest", "python_template"])
+@pytest.mark.parametrize("package_name", ["sys", "pytest", "anysolv_tutorial"])
 def test_is_installed_returns_true_for_an_installed_package(package_name):
     assert is_installed(package_name) is True
 
 
 def test_is_installed_returns_false_for_a_missing_package():
-    assert is_installed("python_template_package_that_does_not_exist") is False
+    assert (
+        is_installed("anysolv_tutorial_package_that_does_not_exist") is False
+    )
 
 
 def test_is_installed_returns_false_for_a_blocked_package(monkeypatch):
@@ -184,7 +185,7 @@ def test_deprecated_keeps_the_metadata_and_marks_the_docstring():
 def test_importing_helpers_does_not_import_joblib():
     # A fresh interpreter, since this one may have imported joblib already.
     code = (
-        "import sys, python_template.helpers; print('joblib' in sys.modules)"
+        "import sys, anysolv_tutorial.helpers; print('joblib' in sys.modules)"
     )
     result = subprocess.run(
         [sys.executable, "-c", code],

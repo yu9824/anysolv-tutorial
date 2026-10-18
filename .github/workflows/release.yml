@@ -13,7 +13,7 @@ env:
   # Note: env context is unavailable in job-level `if` and `environment.url`,
   # so these values are forwarded via the build job's outputs as a workaround.
   PUBLISH_PYPI: "false"
-  PYPI_PACKAGE_NAME: "python-template"
+  PYPI_PACKAGE_NAME: "anysolv-tutorial"
 
 permissions:
   contents: read

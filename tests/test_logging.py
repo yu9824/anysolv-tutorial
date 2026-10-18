@@ -1,4 +1,4 @@
-"""Tests of ``python_template.logging``."""
+"""Tests of ``anysolv_tutorial.logging``."""
 
 from __future__ import annotations
 
@@ -6,10 +6,9 @@ import io
 import logging
 import sys
 
+import anysolv_tutorial.logging
 import pytest
-
-import python_template.logging
-from python_template.logging import (
+from anysolv_tutorial.logging import (
     CRITICAL,
     DEBUG,
     ERROR,
@@ -26,7 +25,7 @@ from python_template.logging import (
     get_library_root_logger,
 )
 
-LIBRARY_NAME = "python_template"
+LIBRARY_NAME = "anysolv_tutorial"
 
 
 @pytest.fixture(autouse=True)
@@ -85,8 +84,8 @@ class _ListHandler(logging.Handler):
 
 
 def test_all_public_names_are_importable():
-    for name in python_template.logging.__all__:
-        assert hasattr(python_template.logging, name)
+    for name in anysolv_tutorial.logging.__all__:
+        assert hasattr(anysolv_tutorial.logging, name)
 
 
 def test_level_constants_are_the_standard_library_values():

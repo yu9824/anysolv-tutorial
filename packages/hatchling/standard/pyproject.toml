@@ -5,7 +5,7 @@ requires = ["hatchling>=1.25", "hatch-vcs>=0.4"]
 build-backend = "hatchling.build"
 
 [project]
-name = "python-template"
+name = "anysolv-tutorial"
 dynamic = ["version"]
 dependencies = ["typing_extensions >= 4.5; python_version < '3.10'"]
 requires-python = ">=3.9"
@@ -41,31 +41,31 @@ docs = [
 # gui = ["TkEasyGUI"]
 
 [project.urls]
-Homepage = "https://github.com/yu9824/python-template"
-# Documentation = "https://yu9824.github.io/python-template/"
-# PyPI = "https://pypi.org/project/python-template/"
-Source = "https://github.com/yu9824/python-template"
-Tracker = "https://github.com/yu9824/python-template/issues"
-"Release Notes" = "https://github.com/yu9824/python-template/releases"
-# Changelog = "https://github.com/yu9824/python-template/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/yu9824/anysolv-tutorial"
+# Documentation = "https://yu9824.github.io/anysolv-tutorial/"
+# PyPI = "https://pypi.org/project/anysolv-tutorial/"
+Source = "https://github.com/yu9824/anysolv-tutorial"
+Tracker = "https://github.com/yu9824/anysolv-tutorial/issues"
+"Release Notes" = "https://github.com/yu9824/anysolv-tutorial/releases"
+# Changelog = "https://github.com/yu9824/anysolv-tutorial/blob/main/CHANGELOG.md"
 
 # [project.scripts]
-# python-template = "python_template.__main__:entrypoint"
+# anysolv-tutorial = "anysolv_tutorial.__main__:entrypoint"
 
 # [project.gui-scripts]
-# python-template-gui = "python_template:main_gui"
+# anysolv-tutorial-gui = "anysolv_tutorial:main_gui"
 
 # src レイアウトのパッケージ検出設定
 [tool.hatch.build.targets.wheel]
-packages = ["src/python_template"]
+packages = ["src/anysolv_tutorial"]
 
 [tool.hatch.version]
 # __init__.__version__ を動的バージョンとして使用
-# path = "src/python_template/__init__.py"
+# path = "src/anysolv_tutorial/__init__.py"
 source = "vcs"
 
 [tool.hatch.build.hooks.vcs]
-version-file = "src/python_template/_version.py"
+version-file = "src/anysolv_tutorial/_version.py"
 
 [tool.hatch.version.raw-options]
 root = "../../../"

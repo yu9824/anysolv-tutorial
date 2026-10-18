@@ -1,4 +1,4 @@
-# `python-template`
+# `anysolv-tutorial`
 
 ```{toctree}
 :maxdepth: 2

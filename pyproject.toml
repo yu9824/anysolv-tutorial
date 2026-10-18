@@ -6,10 +6,13 @@ requires = ["setuptools>=77.0.3", "setuptools-scm[toml]>=7"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "python-template"
+name = "anysolv-tutorial"
 dynamic = ["version"]
-dependencies = ["typing_extensions >= 4.5; python_version < '3.10'"]
-requires-python = ">= 3.9"
+dependencies = [
+    "fairchem-core[extras,ray,torchsim]==2.23.0",
+    "anysolv[ase,gpu]~=0.1.0",
+]
+requires-python = ">= 3.11"
 authors = [{ name = "yu9824" }]
 maintainers = [{ name = "yu9824" }]
 description = ""
@@ -21,8 +24,6 @@ keywords = []
 # https://pypi.org/classifiers/
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
@@ -43,19 +44,19 @@ docs = [
 # gui = ["TkEasyGUI"]
 
 [project.urls]
-Homepage = "https://github.com/yu9824/python-template"
-# Documentation = "https://yu9824.github.io/python-template/"
-# PyPI = "https://pypi.org/project/python-template/"
-Source = "https://github.com/yu9824/python-template"
-Tracker = "https://github.com/yu9824/python-template/issues"
-"Release Notes" = "https://github.com/yu9824/python-template/releases"
-# Changelog = "https://github.com/yu9824/python-template/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/yu9824/anysolv-tutorial"
+# Documentation = "https://yu9824.github.io/anysolv-tutorial/"
+# PyPI = "https://pypi.org/project/anysolv-tutorial/"
+Source = "https://github.com/yu9824/anysolv-tutorial"
+Tracker = "https://github.com/yu9824/anysolv-tutorial/issues"
+"Release Notes" = "https://github.com/yu9824/anysolv-tutorial/releases"
+# Changelog = "https://github.com/yu9824/anysolv-tutorial/blob/main/CHANGELOG.md"
 
 # [project.scripts]
-# python-template = "python_template.__main__:entrypoint"
+# anysolv-tutorial = "anysolv_tutorial.__main__:entrypoint"
 
 # [project.gui-scripts]
-# python-template-gui = "python_template:main_gui"
+# anysolv-tutorial-gui = "anysolv_tutorial:main_gui"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
@@ -64,10 +65,10 @@ package-dir = { "" = "src" }
 
 # __init__.__version__ を動的バージョンとして使用
 # [tool.setuptools.dynamic]
-# version = { attr = "python_template.__version__" }
+# version = { attr = "anysolv_tutorial.__version__" }
 
 [tool.setuptools.packages.find]
 where = ["src/"]
 
 [tool.setuptools_scm]
-write_to = "src/python_template/_version.py"
+write_to = "src/anysolv_tutorial/_version.py"

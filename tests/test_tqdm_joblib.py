@@ -1,4 +1,4 @@
-"""Tests of ``python_template.helpers.tqdm_joblib`` (needs joblib)."""
+"""Tests of ``anysolv_tutorial.helpers.tqdm_joblib`` (needs joblib)."""
 
 from __future__ import annotations
 
@@ -7,8 +7,7 @@ import sys
 import threading
 
 import pytest
-
-from python_template.helpers import dummy_tqdm, is_argument, tqdm_joblib
+from anysolv_tutorial.helpers import dummy_tqdm, is_argument, tqdm_joblib
 
 joblib = pytest.importorskip("joblib")
 Parallel = joblib.Parallel

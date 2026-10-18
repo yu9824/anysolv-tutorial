@@ -87,11 +87,11 @@ def _get_library_name() -> str:
     Returns
     -------
     str
-        The root package name (e.g., 'python_template').
+        The root package name (e.g., 'anysolv_tutorial').
 
     Examples
     --------
-    If called from `python_template.logging._logging`, returns 'python_template'.
+    If called from `anysolv_tutorial.logging._logging`, returns 'anysolv_tutorial'.
     """
     return __name__.split(".")[0]
 
@@ -310,7 +310,7 @@ def get_library_root_logger() -> Logger:
 
     This function returns the root logger for the library, ensuring it is
     properly configured with a default handler and logging level. The logger
-    name corresponds to the top-level package name (e.g., 'python_template').
+    name corresponds to the top-level package name (e.g., 'anysolv_tutorial').
 
     The logger is automatically configured on first access with:
     - Default stream handler (with color support if available)
@@ -326,7 +326,7 @@ def get_library_root_logger() -> Logger:
     --------
     >>> logger = get_library_root_logger()
     >>> logger.info("Library initialized")
-    python_template - INFO - Library initialized
+    anysolv_tutorial - INFO - Library initialized
 
     See Also
     --------
@@ -352,7 +352,7 @@ def get_child_logger(name: str, propagate: bool = True) -> Logger:
     ----------
     name : str
         The module name, typically `__name__`. Must be either:
-        - A name within the library's namespace (e.g., 'python_template.module')
+        - A name within the library's namespace (e.g., 'anysolv_tutorial.module')
         - The string '__main__' for scripts executed directly
     propagate : bool, optional
         Whether log messages should propagate to parent loggers. If `True`,
@@ -372,10 +372,10 @@ def get_child_logger(name: str, propagate: bool = True) -> Logger:
 
     Examples
     --------
-    >>> # In a module: python_template/utils.py
+    >>> # In a module: anysolv_tutorial/utils.py
     >>> logger = get_child_logger(__name__)
     >>> logger.info("Module loaded")
-    python_template.utils - INFO - Module loaded
+    anysolv_tutorial.utils - INFO - Module loaded
 
     >>> # In __main__ script
     >>> logger = get_child_logger(__name__)
@@ -467,7 +467,7 @@ class catch_default_handler:
 
     Examples
     --------
-    >>> from python_template.logging import get_child_logger, catch_default_handler
+    >>> from anysolv_tutorial.logging import get_child_logger, catch_default_handler
     >>> logger = get_child_logger(__name__)
     >>>
     >>> logger.info("This will be logged")
@@ -547,7 +547,7 @@ class catch_all_handler:
 
     Examples
     --------
-    >>> from python_template.logging import get_child_logger, catch_all_handler
+    >>> from anysolv_tutorial.logging import get_child_logger, catch_all_handler
     >>> logger = get_child_logger(__name__)
     >>>
     >>> logger.addHandler(custom_handler)  # Custom handler added

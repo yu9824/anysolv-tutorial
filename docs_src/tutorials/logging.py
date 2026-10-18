@@ -15,9 +15,9 @@
 # %% [markdown]
 # # Logging Tutorial
 #
-# This tutorial demonstrates how to use the `python_template.logging` module to configure and manage logging in your Python applications.
+# This tutorial demonstrates how to use the `anysolv_tutorial.logging` module to configure and manage logging in your Python applications.
 #
-# The `python_template.logging` module provides utilities for:
+# The `anysolv_tutorial.logging` module provides utilities for:
 # - Creating hierarchical loggers
 # - Managing default handlers
 # - Configuring custom handlers
@@ -32,22 +32,22 @@
 #
 
 # %%
-from python_template.logging import (
-    get_child_logger,
-    enable_default_handler,
-    disable_default_handler,
-    catch_default_handler,
-    catch_all_handler,
-    get_handler,
-    get_library_root_logger,
+from logging import FileHandler, StreamHandler
+
+from anysolv_tutorial.logging import (
     DEBUG,
+    ERROR,
     INFO,
     WARNING,
-    ERROR,
+    catch_all_handler,
+    catch_default_handler,
+    disable_default_handler,
+    enable_default_handler,
+    get_child_logger,
+    get_handler,
+    get_library_root_logger,
 )
-from python_template.logging._logging import _reset_library_root_logger
-from logging import StreamHandler, FileHandler
-
+from anysolv_tutorial.logging._logging import _reset_library_root_logger
 
 # %% [markdown]
 # ## Creating Child Loggers
@@ -229,7 +229,7 @@ root_logger = get_library_root_logger()
 root_logger.setLevel(DEBUG)
 
 # All child loggers will inherit this level
-child_logger = get_child_logger("python_template.example")
+child_logger = get_child_logger("anysolv_tutorial.example")
 child_logger.debug("This debug message will be shown (inherited from root)")
 
 

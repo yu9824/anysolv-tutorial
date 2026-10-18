@@ -2,13 +2,13 @@ FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 
 # System packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        git \
-        curl \
-        ca-certificates \
-        build-essential \
-        zsh \
-        tmux \
-        gh \
+    git \
+    curl \
+    ca-certificates \
+    build-essential \
+    zsh \
+    tmux \
+    gh \
     && rm -rf /var/lib/apt/lists/*
 
 # Node.js LTS (for Claude Code)
@@ -20,7 +20,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
 ENV MAMBA_ROOT_PREFIX=/opt/conda
 RUN ARCH="$(uname -m)" \
     && curl -fsSL "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-${ARCH}.sh" \
-        -o /tmp/miniforge.sh \
+    -o /tmp/miniforge.sh \
     && bash /tmp/miniforge.sh -b -p "${MAMBA_ROOT_PREFIX}" \
     && rm /tmp/miniforge.sh \
     && "${MAMBA_ROOT_PREFIX}/bin/mamba" clean --all --yes \
@@ -64,7 +64,7 @@ ENV CONDA_ENV_NAME=work
 # via "Python: Select Interpreter". See .devcontainer/devcontainer.json.
 RUN conda init bash zsh \
     && printf '\n# Auto-activate the project conda environment\nconda activate %s 2>/dev/null || true\n' "${CONDA_ENV_NAME}" \
-        | tee -a /home/vscode/.bashrc /home/vscode/.zshrc > /dev/null
+    | tee -a /home/vscode/.bashrc /home/vscode/.zshrc > /dev/null
 
 # uv (fast pip alternative)
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -86,4 +86,4 @@ RUN mamba env create -y -f /tmp/environment.yml \
     && mamba clean -yaf \
     && rm /tmp/environment.yml
 
-WORKDIR /workspaces/python-template
+WORKDIR /workspaces/anysolv-tutorial

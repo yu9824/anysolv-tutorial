@@ -13,7 +13,7 @@ from ._helpers import dummy_tqdm, is_installed
 
 #: Name of the attribute of a ``Parallel`` instance that binds its running
 #: call to the progress of a ``tqdm_joblib`` context, as ``(progress, base)``.
-_BINDING_ATTRIBUTE = "_python_template_tqdm_joblib_binding"
+_BINDING_ATTRIBUTE = "_anysolv_tutorial_tqdm_joblib_binding"
 
 
 class _Progress:
@@ -278,7 +278,7 @@ class tqdm_joblib:
     Examples
     --------
     >>> from joblib import Parallel, delayed
-    >>> from python_template.helpers import tqdm_joblib
+    >>> from anysolv_tutorial.helpers import tqdm_joblib
     >>> with tqdm_joblib(total=3, desc="squares") as progress_bar:
     ...     squares = Parallel(n_jobs=1)(delayed(pow)(i, 2) for i in range(3))
     >>> squares

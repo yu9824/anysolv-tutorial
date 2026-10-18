@@ -1,6 +1,6 @@
 # Tutorials
 
-This section contains step-by-step tutorials for using `python_template`.
+This section contains step-by-step tutorials for using `anysolv_tutorial`.
 
 ```{toctree}
 :maxdepth: 2

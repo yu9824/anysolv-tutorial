@@ -12,7 +12,23 @@ dependencies:
   - numpy
   - pandas
   - pytest
+  - ase
+  - ruff
+  - mypy
+  - fastapi
+  - xtb
+  - openbabel
+  - pydantic-settings
+  - tensorboard
+  - uvicorn
+  - setuptools
+  - setuptools-scm[toml]
   - pip
+  - pip:
+    - orb-models>=0.7,<0.8
+    - sella
+    - packing-packages
+
   # for kaggle
   # - kaggle
   # - lightgbm

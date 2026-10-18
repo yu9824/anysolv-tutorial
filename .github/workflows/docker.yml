@@ -54,7 +54,7 @@ jobs:
           fetch-depth: 0
       - name: Build user image
         run: |
-          docker build -f docker/Dockerfile -t python-template:ci .
+          docker build -f docker/Dockerfile -t anysolv-tutorial:ci .
       - name: Smoke test
         run: |
-          docker run --rm python-template:ci python -m python_template --version
+          docker run --rm anysolv-tutorial:ci python -m anysolv_tutorial --version

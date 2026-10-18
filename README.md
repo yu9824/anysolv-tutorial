@@ -1,18 +1,18 @@
-# python-template
+# anysolv-tutorial
 
 <!-- badges -->
-[![CI](https://github.com/yu9824/python-template/actions/workflows/CI.yml/badge.svg)](https://github.com/yu9824/python-template/actions/workflows/CI.yml)
-[![docs](https://github.com/yu9824/python-template/actions/workflows/docs.yml/badge.svg)](https://github.com/yu9824/python-template/actions/workflows/docs.yml)
-[![release-pypi](https://github.com/yu9824/python-template/actions/workflows/release.yml/badge.svg)](https://github.com/yu9824/python-template/actions/workflows/release.yml)
+[![CI](https://github.com/yu9824/anysolv-tutorial/actions/workflows/CI.yml/badge.svg)](https://github.com/yu9824/anysolv-tutorial/actions/workflows/CI.yml)
+[![docs](https://github.com/yu9824/anysolv-tutorial/actions/workflows/docs.yml/badge.svg)](https://github.com/yu9824/anysolv-tutorial/actions/workflows/docs.yml)
+[![release-pypi](https://github.com/yu9824/anysolv-tutorial/actions/workflows/release.yml/badge.svg)](https://github.com/yu9824/anysolv-tutorial/actions/workflows/release.yml)
 
 <!--
-[![python_badge](https://img.shields.io/pypi/pyversions/python-template)](https://pypi.org/project/python-template/)
-[![license_badge](https://img.shields.io/pypi/l/python-template)](https://pypi.org/project/python-template/)
-[![PyPI version](https://badge.fury.io/py/python-template.svg)](https://pypi.org/project/python-template/)
-[![Downloads](https://static.pepy.tech/badge/python-template)](https://pepy.tech/project/python-template)
+[![python_badge](https://img.shields.io/pypi/pyversions/anysolv-tutorial)](https://pypi.org/project/anysolv-tutorial/)
+[![license_badge](https://img.shields.io/pypi/l/anysolv-tutorial)](https://pypi.org/project/anysolv-tutorial/)
+[![PyPI version](https://badge.fury.io/py/anysolv-tutorial.svg)](https://pypi.org/project/anysolv-tutorial/)
+[![Downloads](https://static.pepy.tech/badge/anysolv-tutorial)](https://pepy.tech/project/anysolv-tutorial)
 
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-template.svg)](https://anaconda.org/conda-forge/python-template)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-template.svg)](https://anaconda.org/conda-forge/python-template)
+[![Conda Version](https://img.shields.io/conda/vn/conda-forge/anysolv-tutorial.svg)](https://anaconda.org/conda-forge/anysolv-tutorial)
+[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/anysolv-tutorial.svg)](https://anaconda.org/conda-forge/anysolv-tutorial)
 -->
 
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
@@ -27,20 +27,20 @@ Bulk-replace the project name, set up ssh-agent on the host, etc.
 
 ```bash
 # standard
-pip install git+https://github.com/yu9824/python-template.git
+pip install git+https://github.com/yu9824/anysolv-tutorial.git
 
 # with Cython compiling
-pip install git+https://github.com/yu9824/python-template.git#subdirectory=packages/setuptools/cython
+pip install git+https://github.com/yu9824/anysolv-tutorial.git#subdirectory=packages/setuptools/cython
 
 ```
 
 ### Docker
 
 ```bash
-git clone https://github.com/yu9824/python-template.git
-cd python-template
-docker build -f docker/Dockerfile -t python-template .
-docker run --rm -it python-template
+git clone https://github.com/yu9824/anysolv-tutorial.git
+cd anysolv-tutorial
+docker build -f docker/Dockerfile -t anysolv-tutorial .
+docker run --rm -it anysolv-tutorial
 ```
 
 The image contains the package with its optional dependencies and starts a Python shell. The development container lives in `.devcontainer/` instead.
@@ -49,7 +49,7 @@ The image contains the package with its optional dependencies and starts a Pytho
 
 | Directory | Purpose |
 | --- | --- |
-| `src/python_template/` | Package source |
+| `src/anysolv_tutorial/` | Package source |
 | `tests/` | pytest tests |
 | `notebooks/` | Notebooks for experimentation (paired with `.py` via jupytext) |
 | `data/raw/` | Raw, as-obtained data. Contents are not tracked |

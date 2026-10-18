@@ -1,4 +1,4 @@
-name: python-template
+name: anysolv-tutorial
 
 services:
   # 名前付き volume は、マウント先がイメージ側に無いと root 所有で作られる。
@@ -18,12 +18,12 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
-    # gpus: all # If you do not want to use, comment it out
+    gpus: all # If you do not want to use, comment it out
     depends_on:
       init:
         condition: service_completed_successfully
     volumes:
-      - ..:/workspaces/python-template:cached
+      - ..:/workspaces/anysolv-tutorial:cached
       # conda 関連 (/opt/conda) は意図的に volume にしない。envs と pkgs が
       # 同じマウントに載るためハードリンクが効き、環境作成が最も効率的になる。
       # volume に分けると別マウント扱いになりコピーへ退行する。
@@ -41,7 +41,7 @@ services:
       # Windows は %USERPROFILE%、macOS/Linux は $HOME となり、起動元の
       # シェルにも依存しない。
       - ~/.kaggle:/home/vscode/.kaggle:ro
-    working_dir: /workspaces/python-template
+    working_dir: /workspaces/anysolv-tutorial
     command: sleep infinity
 
 volumes:

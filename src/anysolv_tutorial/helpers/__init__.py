@@ -1,4 +1,4 @@
-"""Helper functions and classes for the python-template project.
+"""Helper functions and classes for the anysolv-tutorial project.
 
 This package provides utility functions and classes that are used throughout
 the project. These helpers are designed to be reusable and modular, making
@@ -15,13 +15,13 @@ Examples
 --------
 Check if a package is installed:
 
-    >>> from python_template.helpers import is_installed
+    >>> from anysolv_tutorial.helpers import is_installed
     >>> if is_installed("numpy"):
     ...     import numpy as np
 
 Check if a function accepts a specific argument:
 
-    >>> from python_template.helpers import is_argument
+    >>> from anysolv_tutorial.helpers import is_argument
     >>> def my_func(x, y):
     ...     return x + y
     >>> is_argument(my_func, "x")  # True
@@ -29,26 +29,26 @@ Check if a function accepts a specific argument:
 
 Use a dummy progress bar when tqdm is not available:
 
-    >>> from python_template.helpers import dummy_tqdm
+    >>> from anysolv_tutorial.helpers import dummy_tqdm
     >>> for item in dummy_tqdm([1, 2, 3]):
     ...     process(item)
 
 Show the progress of ``joblib.Parallel`` (requires joblib):
 
     >>> from joblib import Parallel, delayed
-    >>> from python_template.helpers import tqdm_joblib
+    >>> from anysolv_tutorial.helpers import tqdm_joblib
     >>> with tqdm_joblib(total=3):
     ...     Parallel(n_jobs=2)(delayed(pow)(i, 2) for i in range(3))
 
 Notes
 -----
-This package is primarily intended for internal use within the python-template
+This package is primarily intended for internal use within the anysolv-tutorial
 project, but the functions are designed to be reusable in other projects as
 well.
 
 See Also
 --------
-- `python_template.logging` : Logging utilities
+- `anysolv_tutorial.logging` : Logging utilities
 
 """
 

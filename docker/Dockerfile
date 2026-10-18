@@ -2,8 +2,8 @@
 
 # このライブラリの利用者向けイメージ。開発用のコンテナは .devcontainer/ にある。
 #
-#   docker build -f docker/Dockerfile -t python-template .
-#   docker run --rm -it python-template
+#   docker build -f docker/Dockerfile -t anysolv-tutorial .
+#   docker run --rm -it anysolv-tutorial
 #
 # ビルドコンテキストはリポジトリのルート。送るファイルは隣の
 # Dockerfile.dockerignore (この Dockerfile 専用の除外設定) で絞っている。

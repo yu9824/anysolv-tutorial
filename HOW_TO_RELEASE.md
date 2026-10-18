@@ -24,14 +24,14 @@ PyPIとGithub上でのリリースは1つのワークフローで同時に行え
 ### PyPIとGithub
 
 1. `release.yml` の `# FIXME: uncomment` の部分をアンコメントする。
-2. パッケージ名を変える ( `python-template` のところ)
+2. パッケージ名を変える ( `anysolv-tutorial` のところ)
 
 ### conda
 
 botを使って自動でレシピを作ってくれる。requirementsは変わらなかったりするので手で直さなきゃいけない場面も多そう。
 
 ```bash
-git remote add regro-cf-autotick-bot git@github.com:regro-cf-autotick-bot/python-template-feedstock.git
+git remote add regro-cf-autotick-bot git@github.com:regro-cf-autotick-bot/anysolv-tutorial-feedstock.git
 git fetch regro-cf-autotick-bot
 
 ```

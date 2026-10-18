@@ -5,7 +5,7 @@ It uses pyproject.toml for most configuration and only handles
 the Cython-specific compilation.
 
 This script automatically discovers and compiles all .pyx files
-in the src/python_template directory tree.
+in the src/anysolv_tutorial directory tree.
 """
 
 from pathlib import Path
@@ -15,7 +15,7 @@ from setuptools import Extension, setup
 
 # srcディレクトリのパス
 SRC_DIR = Path("src").resolve()
-PACKAGE_DIR = SRC_DIR / "python_template"
+PACKAGE_DIR = SRC_DIR / "anysolv_tutorial"
 
 
 def find_pyx_files(root_dir: Path) -> list[tuple[Path, str]]:
@@ -42,8 +42,8 @@ def find_pyx_files(root_dir: Path) -> list[tuple[Path, str]]:
         relative_path = pyx_file.relative_to(root_path)
 
         # モジュール名を生成（拡張子を除く）
-        # 例: python_template/cython.pyx -> python_template.cython
-        # 例: python_template/module/foo.pyx -> python_template.module.foo
+        # 例: anysolv_tutorial/cython.pyx -> anysolv_tutorial.cython
+        # 例: anysolv_tutorial/module/foo.pyx -> anysolv_tutorial.module.foo
         parts = relative_path.parts[:-1] + (relative_path.stem,)
         module_name = ".".join(parts)
 

@@ -13,8 +13,8 @@ GitHub テンプレートリポジトリ。「Use this template」で新しい�
 
 - **ライブラリの骨組み**: src レイアウト、git タグからのバージョン決定、
   Sphinx ドキュメント、CI (テスト・ドキュメント・リリース) が最初から揃う
-- **再利用できる部品**: ライブラリ用 logging (`python_template.logging`) と
-  小物 (`python_template.helpers`: `is_installed`, `dummy_tqdm`,
+- **再利用できる部品**: ライブラリ用 logging (`anysolv_tutorial.logging`) と
+  小物 (`anysolv_tutorial.helpers`: `is_installed`, `dummy_tqdm`,
   `tqdm_joblib`, `deprecated`)。下流でもそのまま使う前提で、テスト付き
 - **実験の置き場**: `notebooks/` (jupytext でペア)、`data/`、`models/`
 - **環境**: conda 環境と Claude Code 入りの Dev Container、
@@ -32,8 +32,8 @@ GitHub テンプレートリポジトリ。「Use this template」で新しい�
   ブランチで commit してよいが、merge 前に消す (中身は git 履歴に残る)
 - 下流に引き継ぐもの (CLAUDE.md、`.kiro/steering/` の tech / structure、
   `.kiro/settings/`、`.claude/skills/`) はプロジェクト名に依存しない書き方にする
-- 下流で書き換えるものはこのファイルとパッケージ名 (`python_template` /
-  `python-template`) に限る
+- 下流で書き換えるものはこのファイルとパッケージ名 (`anysolv_tutorial` /
+  `anysolv-tutorial`) に限る
 
 ---
 _updated_at: 2026-10-14_
