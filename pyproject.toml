@@ -9,7 +9,7 @@ build-backend = "setuptools.build_meta"
 name = "anysolv-tutorial"
 dynamic = ["version"]
 dependencies = [
-    "fairchem-core[extras,ray,torchsim]==2.23.0",
+    "fairchem-core[extras,ray,torchsim]==2.25.0",
     "anysolv[ase,gpu]~=0.1.0",
 ]
 requires-python = ">= 3.11"
